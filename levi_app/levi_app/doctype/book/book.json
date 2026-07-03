@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:title",
  "creation": "2026-06-28 22:50:35.465644",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,7 +16,8 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "unique": 1
   },
   {
    "fieldname": "author",
@@ -41,10 +43,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-28 22:53:42.812379",
+ "modified": "2026-07-03 21:05:00.557979",
  "modified_by": "Administrator",
  "module": "Levi App",
  "name": "Book",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

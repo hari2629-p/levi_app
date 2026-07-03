@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "LIB-ISSUE-.#####",
  "creation": "2026-06-28 23:37:10.619824",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -10,7 +11,9 @@
   "issue_date",
   "due_date",
   "return_date",
-  "status"
+  "status",
+  "author",
+  "isbn"
  ],
  "fields": [
   {
@@ -41,19 +44,34 @@
    "label": "Return Date"
   },
   {
+   "default": "Issued",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Issued\\nReturned"
+   "options": "Issued\nReturned",
+   "sort_options": 1
+  },
+  {
+   "fetch_from": "book.author",
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author"
+  },
+  {
+   "fetch_from": "book.isbn",
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-28 23:41:29.336988",
+ "modified": "2026-07-03 21:14:50.203145",
  "modified_by": "Administrator",
  "module": "Levi App",
  "name": "Book Issue",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
